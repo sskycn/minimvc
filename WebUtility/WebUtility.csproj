@@ -1,0 +1,313 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="4.0">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.30729</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{71192E07-4F71-4A9C-B3C0-EF1CC48ECF1F}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Cvv.WebUtility</RootNamespace>
+    <AssemblyName>Cvv.WebUtility</AssemblyName>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <OldToolsVersion>3.5</OldToolsVersion>
+    <UpgradeBackupLocation>
+    </UpgradeBackupLocation>
+    <IsWebBootstrapper>true</IsWebBootstrapper>
+    <ApplicationIcon>
+    </ApplicationIcon>
+    <SignAssembly>true</SignAssembly>
+    <AssemblyOriginatorKeyFile>key.snk</AssemblyOriginatorKeyFile>
+    <TargetFrameworkVersion>v2.0</TargetFrameworkVersion>
+    <PublishUrl>http://localhost/Cvv.WebUtility/</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Web</InstallFrom>
+    <UpdateEnabled>true</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>TRACE;DEBUG;NET20,DEV</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE;NET20,DEV</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.configuration" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Components\RightInfo.cs" />
+    <Compile Include="Components\RightManager.cs" />
+    <Compile Include="Components\SecurityManager.cs" />
+    <Compile Include="Components\UserData.cs" />
+    <Compile Include="Core\AttributeHelper.cs" />
+    <Compile Include="Core\Base64Serializer.cs" />
+    <Compile Include="Core\BinaryHelper.cs" />
+    <Compile Include="Core\BinarySerializer.cs" />
+    <Compile Include="Core\Cache\SmartCache.cs" />
+    <Compile Include="Core\CompatibilityLayer.cs" />
+    <Compile Include="Core\Delegate.cs" />
+    <Compile Include="Core\FastReflection\FastPropertyInfo.cs" />
+    <Compile Include="Core\Logger\Logger.cs" />
+    <Compile Include="Core\Logger\LoggingProvider.cs" />
+    <Compile Include="Core\Logger\LogLevel.cs" />
+    <Compile Include="Core\Logger\Providers\LoggingProviderConsole.cs" />
+    <Compile Include="Core\Logger\Providers\LoggingProviderFile.cs" />
+    <Compile Include="Core\Mocking\ITimeProvider.cs" />
+    <Compile Include="Core\Mocking\RealTimeProvider.cs" />
+    <Compile Include="Core\Scheduler\CyclicScheduler.cs" />
+    <Compile Include="Core\Scheduler\MonthlyScheduler.cs" />
+    <Compile Include="Core\Scheduler\ScheduleHistory\DefaultHistoryStore.cs" />
+    <Compile Include="Core\Scheduler\ScheduleHistory\FileHistoryStore.cs" />
+    <Compile Include="Core\Scheduler\ScheduleHistory\IScheduleHistoryStore.cs" />
+    <Compile Include="Core\Scheduler\Scheduler.cs" />
+    <Compile Include="Core\Scheduler\TimeOfDayScheduler.cs" />
+    <Compile Include="Core\Scheduler\WeeklyScheduler.cs" />
+    <Compile Include="Core\StringHelper.cs" />
+    <Compile Include="Core\Tuple.cs" />
+    <Compile Include="Core\TypedWeakReference.cs" />
+    <Compile Include="Exceptions\InvokeException.cs" />
+    <Compile Include="Exceptions\CException.cs" />
+    <Compile Include="Exceptions\NoAccessException.cs" />
+    <Compile Include="Expression\Ast\HtmlStatement.cs" />
+    <Compile Include="Expression\IContext.cs" />
+    <Compile Include="Expression\Lexer\JsonLexer.cs" />
+    <Compile Include="Expression\Parser\JsonParser.cs" />
+    <Compile Include="Mini\Reflection.cs" />
+    <Compile Include="Mini\SafeDictionary.cs" />
+    <Compile Include="Expression\Ast\ArgumentNode.cs" />
+    <Compile Include="Expression\Ast\ArrayCreationExpression.cs" />
+    <Compile Include="Expression\Ast\Block.cs" />
+    <Compile Include="Expression\Ast\BlockStatement.cs" />
+    <Compile Include="Expression\Ast\BooleanPrimitive.cs" />
+    <Compile Include="Expression\Ast\BreakException.cs" />
+    <Compile Include="Expression\Ast\BreakStatement.cs" />
+    <Compile Include="Expression\Ast\BinaryExpression.cs" />
+    <Compile Include="Expression\Ast\ConditionalExpression.cs" />
+    <Compile Include="Expression\Ast\ContinueException.cs" />
+    <Compile Include="Expression\Ast\ContinueStatement.cs" />
+    <Compile Include="Expression\Ast\DictionaryCreationExpression.cs" />
+    <Compile Include="Expression\Ast\DoublePrimitive.cs" />
+    <Compile Include="Expression\Ast\EchoStatement.cs" />
+    <Compile Include="Expression\Ast\ElementAccessExpression.cs" />
+    <Compile Include="Expression\Ast\ExpressionList.cs" />
+    <Compile Include="Expression\Ast\ExpressionNode.cs" />
+    <Compile Include="Expression\Ast\ExpressionStatement.cs" />
+    <Compile Include="Expression\Ast\ForeachStatement.cs" />
+    <Compile Include="Expression\Ast\ForStatement.cs" />
+    <Compile Include="Expression\Ast\IdentifierExpression.cs" />
+    <Compile Include="Expression\Ast\IfStatement.cs" />
+    <Compile Include="Expression\Ast\IntegralPrimitive.cs" />
+    <Compile Include="Expression\Ast\InvocationExpression.cs" />
+    <Compile Include="Expression\Ast\Keys.cs" />
+    <Compile Include="Expression\Ast\LiteralNode.cs" />
+    <Compile Include="Expression\Ast\MemberAccessExpression.cs" />
+    <Compile Include="Expression\Ast\NameExpressionNode.cs" />
+    <Compile Include="Expression\Ast\NodeCollection.cs" />
+    <Compile Include="Expression\Ast\NullPrimitive.cs" />
+    <Compile Include="Expression\Ast\ParenthesizedExpression.cs" />
+    <Compile Include="Exceptions\ParseException.cs" />
+    <Compile Include="Expression\Ast\PostDecrementExpression.cs" />
+    <Compile Include="Expression\Ast\PostIncrementExpression.cs" />
+    <Compile Include="Expression\Ast\PrimaryExpression.cs" />
+    <Compile Include="Expression\Ast\QuotePrimitive.cs" />
+    <Compile Include="Expression\Ast\StringPrimitive.cs" />
+    <Compile Include="Expression\Ast\Token.cs" />
+    <Compile Include="Expression\Ast\TokenCollection.cs" />
+    <Compile Include="Expression\Ast\TokenId.cs" />
+    <Compile Include="Expression\Ast\UnaryExpression.cs" />
+    <Compile Include="Expression\LexReader.cs" />
+    <Compile Include="Expression\Lexer\XMLexer.cs" />
+    <Compile Include="Expression\Ast\StatementNode.cs" />
+    <Compile Include="Expression\Parser\XMLParser.cs" />
+    <Compile Include="Mini\XMLWriter.cs" />
+    <Compile Include="Mvc\ViewEngine\Skin.cs" />
+    <Compile Include="Mvc\Invoker\BaseMethodInvoker.cs" />
+    <Compile Include="Components\StringHelper.cs" />
+    <Compile Include="Expression\Ast\BaseNode.cs" />
+    <Compile Include="Expression\Ast\CompilationUnit.cs" />
+    <Compile Include="Expression\Ast\INode.cs" />
+    <Compile Include="Expression\Lexer\HtmlLexer.cs" />
+    <Compile Include="Expression\ILexer.cs" />
+    <Compile Include="Expression\Location.cs" />
+    <Compile Include="Expression\ParserFactory.cs" />
+    <Compile Include="Expression\Parser\HtmlParser.cs" />
+    <Compile Include="Expression\IParser.cs" />
+    <Compile Include="Mini\MiniSecurity.cs" />
+    <Compile Include="Mini\MFilter.cs" />
+    <Compile Include="Mini\UrlHelper.cs" />
+    <Compile Include="Mvc\Invoker\MethodSchema.cs" />
+    <Compile Include="Mvc\Invoker\MethodInvoker.cs" />
+    <Compile Include="Core\Json\JSONSerializer.cs" />
+    <Compile Include="Mini\JSONWriter.cs" />
+    <Compile Include="Net\Client\HttpClient.cs" />
+    <Compile Include="Net\Client\HttpException.cs" />
+    <Compile Include="Net\Client\IMAPClient.cs" />
+    <Compile Include="Net\Client\IMAPException.cs" />
+    <Compile Include="Net\Client\Pop3Client.cs" />
+    <Compile Include="Net\Client\POP3Exception.cs" />
+    <Compile Include="Net\Client\SmtpClient.cs" />
+    <Compile Include="Net\Client\SMTPException.cs" />
+    <Compile Include="Net\Dns\A6Record.cs" />
+    <Compile Include="Net\Dns\AAAARecord.cs" />
+    <Compile Include="Net\Dns\AfsdbRecord.cs" />
+    <Compile Include="Net\Dns\Answer.cs" />
+    <Compile Include="Net\Dns\ARecord.cs" />
+    <Compile Include="Net\Dns\CNameRecord.cs" />
+    <Compile Include="Net\Dns\DataBuffer.cs" />
+    <Compile Include="Net\Dns\DNameRecord.cs" />
+    <Compile Include="Net\Dns\DnsAnswer.cs" />
+    <Compile Include="Net\Dns\DnsEntry.cs" />
+    <Compile Include="Net\Dns\DnsQuery.cs" />
+    <Compile Include="Net\Dns\DomainNameOnly.cs" />
+    <Compile Include="Net\Dns\DSRecord.cs" />
+    <Compile Include="Net\Dns\ExceptionRecord.cs" />
+    <Compile Include="Net\Dns\HInfoRecord.cs" />
+    <Compile Include="Net\Dns\IRecordData.cs" />
+    <Compile Include="Net\Dns\IsdnRecord.cs" />
+    <Compile Include="Net\Dns\KeyRecord.cs" />
+    <Compile Include="Net\Dns\KXRecord.cs" />
+    <Compile Include="Net\Dns\LocRecord.cs" />
+    <Compile Include="Net\Dns\MBRecord.cs" />
+    <Compile Include="Net\Dns\MGRecord.cs" />
+    <Compile Include="Net\Dns\MInfoRecord.cs" />
+    <Compile Include="Net\Dns\MRRecord.cs" />
+    <Compile Include="Net\Dns\MXRecord.cs" />
+    <Compile Include="Net\Dns\NaptrRecord.cs" />
+    <Compile Include="Net\Dns\NsapRecord.cs" />
+    <Compile Include="Net\Dns\NSRecord.cs" />
+    <Compile Include="Net\Dns\NullRecord.cs" />
+    <Compile Include="Net\Dns\PrefAndDomain.cs" />
+    <Compile Include="Net\Dns\PtrRecord.cs" />
+    <Compile Include="Net\Dns\PXRecord.cs" />
+    <Compile Include="Net\Dns\Question.cs" />
+    <Compile Include="Net\Dns\Record.cs" />
+    <Compile Include="Net\Dns\RPRecord.cs" />
+    <Compile Include="Net\Dns\RTRecord.cs" />
+    <Compile Include="Net\Dns\Server.cs" />
+    <Compile Include="Net\Dns\SigRecord.cs" />
+    <Compile Include="Net\Dns\SoaRecord.cs" />
+    <Compile Include="Net\Dns\SrvRecord.cs" />
+    <Compile Include="Net\Dns\TextOnly.cs" />
+    <Compile Include="Net\Dns\TKeyRecord.cs" />
+    <Compile Include="Net\Dns\TSigRecord.cs" />
+    <Compile Include="Net\Dns\TxtRecord.cs" />
+    <Compile Include="Net\Dns\Utils.cs" />
+    <Compile Include="Net\Dns\WksRecord.cs" />
+    <Compile Include="Net\Dns\X25Record.cs" />
+    <Compile Include="Mvc\Provider\IStringFilter.cs" />
+    <Compile Include="Mvc\Provider\ISerializerProvider.cs" />
+    <Compile Include="Mvc\ControllerAction.cs" />
+    <Compile Include="Mvc\IHttpSessionState.cs" />
+    <Compile Include="Mvc\Provider\ISessionLoggingProvider.cs" />
+    <Compile Include="Mvc\Provider\ISessionSerializer.cs" />
+    <Compile Include="Mvc\Provider\IVisitorProvider.cs" />
+    <Compile Include="Mvc\Provider\MiniSessionLoggingProvider.cs" />
+    <Compile Include="Mvc\Provider\MinimalVisitorProvider.cs" />
+    <Compile Include="Exceptions\JSONException.cs" />
+    <Compile Include="Mvc\ClientDataCollection.cs" />
+    <Compile Include="Mvc\Provider\IDeserializerProvider.cs" />
+    <Compile Include="Mvc\Provider\ILoggingProvider.cs" />
+    <Compile Include="Mvc\Provider\ISecurityProvider.cs" />
+    <Compile Include="Mvc\Provider\ISessionDataProvider.cs" />
+    <Compile Include="Core\Json\JSONDeserializer.cs" />
+    <Compile Include="Mvc\Provider\MiniSessionDataProvider.cs" />
+    <Compile Include="Components\ResourceManager.cs" />
+    <Compile Include="Mvc\SessionManager.cs" />
+    <Compile Include="Mvc\SessionProperty.cs" />
+    <Compile Include="Components\Util.cs" />
+    <Compile Include="Mvc\ControllerClass.cs" />
+    <Compile Include="Mvc\Invoker\Function.cs" />
+    <Compile Include="Mvc\HttpContextBase.cs" />
+    <Compile Include="Mvc\IHttpRequest.cs" />
+    <Compile Include="Mvc\IHttpResponse.cs" />
+    <Compile Include="Mvc\IHttpServerUtility.cs" />
+    <Compile Include="Mvc\OnlineHttpContext.cs" />
+    <Compile Include="Mvc\OnlineHttpRequest.cs" />
+    <Compile Include="Mvc\OnlineHttpResponse.cs" />
+    <Compile Include="Mvc\OnlineHttpServerUtility.cs" />
+    <Compile Include="Mvc\OnlineHttpSessionState.cs" />
+    <Compile Include="Mvc\SessionBase.cs" />
+    <Compile Include="Mvc\WebAppContext.cs" />
+    <Compile Include="Mvc\WebAppHelper.cs" />
+    <Compile Include="Mvc\Controller.cs" />
+    <Compile Include="Mvc\HttpHandler\CPageHandler.cs" />
+    <Compile Include="Mvc\HttpHandler\PageHandler.cs" />
+    <Compile Include="Mvc\HttpModule\CHttpModule.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Mvc\WebAppConfig.cs" />
+    <Compile Include="Mvc\ViewEngine\UrlHolder.cs" />
+    <Compile Include="Mvc\ViewEngine\ViewData.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1 Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.2.0">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 2.0 %28x86%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.0">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.0 %28x86%29</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="key.snk" />
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+  <PropertyGroup>
+    <PostBuildEvent>
+    </PostBuildEvent>
+  </PropertyGroup>
+</Project>

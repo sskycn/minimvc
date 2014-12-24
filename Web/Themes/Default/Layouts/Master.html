@@ -1,0 +1,52 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content="" />
+    <meta name="author" content="" />
+    <link rel="shortcut icon" href="$THEME/Images/favicon.ico$Version" />
+    <title>$TITLE</title>
+    <link href="$THEME/css/bootstrap.min.css$Version" rel="stylesheet" />
+    <link href="$THEME/css/css.css$Version" rel="stylesheet" />
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+      <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+  </head>
+
+  <body>
+
+    <div class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="http://www.minimvc.com">MiniMVC</a>
+        </div>
+        <div class="navbar-collapse collapse">
+          <ul class="nav navbar-nav">
+            <li$if(VIEWNAME=="index"){ class="active"}><a href="$ROOT/index$EXTENSION">$R.Home</a></li>
+            <li$if(VIEWNAME=="about"){ class="active"}><a href="$ROOT/about$EXTENSION">$R.About</a></li>
+            <li$if(VIEWNAME=="contact"){ class="active"}><a href="$ROOT/contact$EXTENSION">$R.Contact</a></li>
+          </ul>
+          <form method="get" action="$URL/Search" class="navbar-form navbar-right" role="form">
+            <div class="form-group">
+              <input type="text" name="key" placeholder="$R.Key" class="form-control">
+            </div>
+            <button type="submit" class="btn btn-success">$R.Search</button>
+          </form>
+        </div><!--/.navbar-collapse -->
+      </div>
+    </div>
+    $VIEW
+    <script type="text/javascript" src="$ROOT/Utility/jquery.min.js$Version"></script>
+    <script type="text/javascript" src="$ROOT/Utility/bootstrap.min.js$Version"></script>
+  </body>
+</html>

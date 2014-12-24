@@ -1,0 +1,9 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<root>
+    <r name="Home">Home</r>
+    <r name="About">About</r>
+    <r name="Contact">Contact</r>
+    <r name="Search">Search</r>
+    <r name="Key">Key</r>
+    <r name="Heading">Heading</r>
+</root>
