@@ -9,9 +9,9 @@ using System.Security;
 [assembly: AssemblyTitle("MiniMVC")]
 [assembly: AssemblyDescription("MiniMVC")]
 [assembly: AssemblyConfiguration("")]
-[assembly: AssemblyCompany("CVV")]
+[assembly: AssemblyCompany("MiniMVC.COM")]
 [assembly: AssemblyProduct("Cvv.WebUtility")]
-[assembly: AssemblyCopyright("Copyright © MiniMvc.com 2007-2013")]
+[assembly: AssemblyCopyright("Copyright © MiniMvc.com 2007-2014")]
 [assembly: AssemblyTrademark("MiniMVC")]
 [assembly: AssemblyCulture("")]
 
