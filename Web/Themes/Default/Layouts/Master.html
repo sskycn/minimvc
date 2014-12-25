@@ -36,9 +36,9 @@
             <li$if(VIEWNAME=="about"){ class="active"}><a href="$ROOT/about$EXTENSION">$R.About</a></li>
             <li$if(VIEWNAME=="contact"){ class="active"}><a href="$ROOT/contact$EXTENSION">$R.Contact</a></li>
           </ul>
-          <form method="get" action="$URL/Search" class="navbar-form navbar-right" role="form">
+          <form method="get" action="$URL" class="navbar-form navbar-right" role="form">
             <div class="form-group">
-              <input type="text" name="key" placeholder="$R.Key" class="form-control">
+              <input type="text" name="key" value="$key" placeholder="$R.Key" class="form-control">
             </div>
             <button type="submit" class="btn btn-success">$R.Search</button>
           </form>

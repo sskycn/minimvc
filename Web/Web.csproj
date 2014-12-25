@@ -41,13 +41,15 @@
   </PropertyGroup>
   <ItemGroup>
     <Content Include="index.aspx" />
-	<Content Include="Languages\en-US\Resources.xml" />
+    <Content Include="Languages\en-US\Resources.xml" />
     <Content Include="Languages\zh-CN\Resources.xml" />
     <Content Include="Themes\Default\css\css.css" />
     <Content Include="Themes\Default\Layouts\master.html" />
+    <Content Include="Themes\Default\Skins\about.html" />
+    <Content Include="Themes\Default\Skins\contact.html" />
     <Content Include="Themes\Default\Skins\index.html" />
+    <Content Include="Themes\Default\Skins\_footer.html" />
     <Content Include="Web.config" />
-	<Folder Include="Utility\" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -66,6 +68,9 @@
     <Reference Include="System" />
     <Reference Include="System.Data" />
     <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Utility\" />
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" />

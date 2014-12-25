@@ -67,6 +67,8 @@
     <Compile Include="Base\RestrictedController.cs" />
     <Compile Include="Components\MiniLog.cs" />
     <Compile Include="Components\MiniSession.cs" />
+    <Compile Include="PageControllers\About.cs" />
+    <Compile Include="PageControllers\Contact.cs" />
     <Compile Include="PageControllers\Index.cs" />
     <Compile Include="PageControllers\Logout.cs" />
     <Compile Include="PageControllers\Signin.cs" />
