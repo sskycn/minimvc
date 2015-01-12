@@ -63,8 +63,6 @@ namespace Cvv.WebUtility.Mini
 
             client.GetData(string.Format("{0}/Authorize?client_id={1}&code={2}", WebAppConfig.OAuthUri, WebAppConfig.AppKey, code), out responseText);
 
-            responseText = Decrypt(responseText);
-
             UserData userData = WebAppConfig.DeserializeProvider.Parse(responseText, typeof(UserData)) as UserData;
 
             if (!userData.IsNull())
@@ -204,11 +202,6 @@ namespace Cvv.WebUtility.Mini
             _cache.ClearCache();
         }
 
-        public string Encrypt(string data)
-        {
-            return Encrypt(data, WebAppConfig.PublicKey);
-        }
-
         public string Encrypt(string data, string publicKey)
         {
             UnicodeEncoding byteConverter = new UnicodeEncoding();
@@ -240,11 +233,6 @@ namespace Cvv.WebUtility.Mini
             }
 
             return sb.ToString();
-        }
-
-        public string Decrypt(string data)
-        {
-            return Decrypt(data, WebAppConfig.PrivateKey);
         }
 
         public string Decrypt(string data, string privateKey)

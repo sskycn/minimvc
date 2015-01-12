@@ -107,23 +107,9 @@ namespace Cvv.WebUtility.Mvc.Provider
         /// RSA Encrypt
         /// </summary>
         /// <param name="data"></param>
-        /// <returns></returns>
-        string Encrypt(string data);
-
-        /// <summary>
-        /// RSA Encrypt
-        /// </summary>
-        /// <param name="data"></param>
         /// <param name="publicKey"></param>
         /// <returns></returns>
         string Encrypt(string data, string publicKey);
-
-        /// <summary>
-        /// RSA Decrypt
-        /// </summary>
-        /// <param name="data"></param>
-        /// <returns></returns>
-        string Decrypt(string data);
 
         /// <summary>
         ///  RSA Decrypt

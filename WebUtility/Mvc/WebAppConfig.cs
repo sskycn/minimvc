@@ -22,8 +22,6 @@ namespace Cvv.WebUtility.Mvc
         private static string _appKey;
         private static string _appSecret;
         private static string _oAuthUri;
-        private static string _publicKey;
-        private static string _privateKey;
 
         private static Type _sessionType;
         private static Type _securityType;
@@ -76,8 +74,6 @@ namespace Cvv.WebUtility.Mvc
             _appKey = ConfigurationManager.AppSettings["AppKey"];
             _appSecret = ConfigurationManager.AppSettings["AppSecret"];
             _oAuthUri = ConfigurationManager.AppSettings["OAuthUri"];
-            _publicKey = ConfigurationManager.AppSettings["PublicKey"];
-            _privateKey = ConfigurationManager.AppSettings["PrivateKey"];
 
             //if (string.IsNullOrEmpty(_appKey))
             //    throw new CException("AppKey not found, please check the Web.config's configuration/appSettings.");
@@ -176,16 +172,6 @@ namespace Cvv.WebUtility.Mvc
         public static string OAuthUri
         {
             get { return _oAuthUri; }
-        }
-
-        public static string PublicKey
-        {
-            get { return _publicKey; }
-        }
-
-        public static string PrivateKey
-        {
-            get { return _privateKey; }
         }
 
         public static string DefaultLayout

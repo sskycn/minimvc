@@ -49,7 +49,9 @@
     <Content Include="Themes\Default\Skins\contact.html" />
     <Content Include="Themes\Default\Skins\index.html" />
     <Content Include="Themes\Default\Skins\_footer.html" />
-    <Content Include="Web.config" />
+    <Content Include="Web.config">
+      <SubType>Designer</SubType>
+    </Content>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Properties\AssemblyInfo.cs" />

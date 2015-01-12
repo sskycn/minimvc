@@ -10,7 +10,6 @@ namespace Cvv.WebUtility.Mvc
 {
     public class ClientDataCollection
     {
-        private static readonly string path = ConfigurationManager.AppSettings["Model"];
         private readonly bool _post;
 
         public ClientDataCollection(bool post)
@@ -53,7 +52,7 @@ namespace Cvv.WebUtility.Mvc
         {
             string stringValue = Get(name);
 
-            if (targetType.FullName.StartsWith(path) && string.IsNullOrEmpty(stringValue))
+            if (targetType.FullName.IndexOf(".Model") != -1 && string.IsNullOrEmpty(stringValue))
             {
                 ConstructorInfo[] constructors = targetType.GetConstructors();
 
